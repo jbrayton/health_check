@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Copyright (c) 2010-2013 Ian Heggie, released under the MIT license.
 # See MIT-LICENSE for details.
 
@@ -21,7 +19,7 @@ module HealthCheck
 
     # process an array containing a list of checks
     def self.process_checks(checks, called_from_middleware = false)
-      errors = ''
+      errors = +""
       checks.each do |check|
         case check
           when 'and', 'site'
